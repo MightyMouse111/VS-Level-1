@@ -1,0 +1,213 @@
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    border: 1px solid black;
+    align-content: center;
+}
+#grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    margin: 35px;
+    grid-gap: 5px;
+   
+} 
+header {
+    border: 1px solid black;
+    background-color: dodgerblue;
+    grid-column: 1 / 5;  
+    grid-row: 1 / 2;
+}
+nav {
+    background-color: royalblue;
+    grid-column: 1 / 5;  
+    grid-row: 2 / 3;  
+}
+img {
+    border: 2px solid black;
+    grid-column: 1 / 5;  
+    grid-row: 3 / 5;
+}
+ 
+main {
+    border: 2px solid black;
+    grid-column: 1 / 5;  
+    grid-row: 5 / 6;    
+}
+ 
+article {
+    border: 1px solid black;
+    background-color: #85CFD8;
+    grid-column: 1 / 5;  
+    grid-row: 6 / 7;  
+}
+ 
+#box1 {
+    background-color: green; 
+    grid-column: 1 / 5;  
+    grid-row: 7 / 8;  
+}
+ 
+#box2 {
+    background-color: lightgreen;
+    grid-column: 1 / 5;  
+    grid-row: 8 / 9;  
+}
+ 
+p {
+    background-color: lightcoral;
+    grid-column: 1 / 5;  
+    grid-row: 9 / 10;
+}
+footer {
+    border: 1px solid black;
+    background-color: darkslateblue;
+    grid-column: 1 / 5;  
+    grid-row: 10 / 11;
+}
+
+#grid-container > div {
+    border: 1px solid black;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+html {
+    background-color: blueviolet;
+}
+
+header {
+    font-size: 22px;
+    text-align: center;
+    font-style: oblique;
+}
+
+nav > div {
+    border: 1px solid black;
+    border-radius: 3px;
+    text-align: center;
+    font-style: italic;
+}
+
+main {
+    background-color: lightblue;
+    font-style: oblique;
+    padding: 10px 30px 30px;
+}
+
+footer {
+    font-size: 20px;
+    text-align: center;
+}
+
+.skate {
+    position: relative;
+    height: 300px;
+    width: 80%;
+    left: 35px;
+    right: 35px;
+}
+#Beginners {
+    border: 1px solid black;
+    background-color: lightgreen;
+    grid-column: 1 / 5;  
+    grid-row: 11 / 12;
+    text-align: center;
+}
+#Intermediate {
+    border: 1px solid black;
+    background-color: lightgreen;
+    grid-column: 1 / 5;  
+    grid-row: 12 / 13;
+    text-align: center;
+}
+#Advanced {
+    border: 1px solid black;
+    background-color: lightgreen;
+    grid-column: 1 / 5;  
+    grid-row: 13 / 14;
+    text-align: center;
+}
+
+span.parts {
+    color: #f00;
+}
+
+#box1 {
+   border: 2px solid white;
+   text-align: center;
+   font-style: oblique;
+   margin-top: 5px;
+   margin-bottom: 5px;
+}
+
+#box2 {
+   border: 2px solid black;
+   text-align: center;
+   font-style: oblique;
+}
+
+p {
+   border: 2px solid black;
+   text-align: center;
+   font-style: oblique;
+   margin-top: 5px;
+   margin-bottom: 5px;
+}
+
+.highlight {
+  background-color:#ee3;
+}
+
+article {
+    text-align: center;
+    font-style: italic;
+}
+
+@media (min-width: 500px) and (max-width: 800px) {
+    #grid-container {
+        display: grid;
+        grid-template-columns: repeat(4, auto);
+        margin: 0px;
+        grid-gap: 10px;
+        background-color: grey;
+    }
+    header {
+        background-color: purple;
+    }
+    img {
+        border-color: seagreen;
+        left: 35px;
+        right: 35px;
+        top: 5px;
+        bottom: 5px;
+    }
+    #html {
+        background-color: grey;
+    }
+    nav {
+        background-color: lightcoral;
+    }
+    main {
+        background-color: violet;
+    }
+    article {
+        background-color: yellow;
+    }
+    p {
+        background-color: violet;
+    }
+    #box1 {
+        background-color: lightskyblue;
+    }
+    #box2 {
+        background-color: lightseagreen;
+    }
+    footer {
+        background-color: magenta;
+    }
+}

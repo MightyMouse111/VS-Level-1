@@ -1,0 +1,94 @@
+* {
+    margin: 5px;
+}
+.navbar{
+    border: solid black 1px;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+}
+
+body {
+    background-color: mediumaquamarine;
+}
+#container1{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    "header header header header"
+    "sidebar sidebar content content"
+    "sidebar sidebar sidebar2 footer";
+    width: 100vw;
+    height: 100vh;
+    grid-gap: 0px;
+}
+.header{
+    background-color: red;
+    grid-area: header;
+    border-radius: 6px;
+    padding: 1em;
+}
+.sidebar{
+    background-color: blue;
+    grid-area: sidebar;
+    border-radius: 6px;
+    padding: 1em;
+}
+.content{
+    background-color: darkgreen;
+    grid-area: content;
+    border-radius: 6px;
+    padding: 1em;
+}
+.sidebar2{
+    background-color: darkmagenta;
+    grid-area: sidebar2;
+    border-radius: 6px;
+    padding: 1em;
+}
+.footer{
+    background-color: darkslategray;
+    grid-area: footer;
+    border-radius: 6px;
+    padding: 1em;
+}
+
+/* Small phones */
+@media only screen and (min-width: 300px){
+    #container1 {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header"
+        "sidebar"
+        "content"
+        "sidebar2"
+        "footer";
+    }
+}
+    /* tablets */
+@media only screen and (min-width: 500px){
+    #container1 {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas: 
+        "header header header"
+        "sidebar content content"
+        "sidebar2 sidebar2 sidebar2"
+        "footer footer footer";
+    }
+}
+    /* laptop */
+@media only screen and (min-width: 700px){
+    #container1 {
+
+        grid-template-columns: 1fr 1.5fr 1fr;
+        grid-template-rows: 1.0fr 1.5fr 1.0fr;
+        grid-template-areas: 
+        "header header header"
+        "sidebar content sidebar2"
+        "footer footer footer";
+        grid-gap: 1.5em;
+    }
+}
