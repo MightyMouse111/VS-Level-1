@@ -12,12 +12,19 @@ h2.className = "header2";
 document.getElementById("header2").appendChild(h2);
 //
 
-const messages = document.getElementsByClassName("message");
 document.getElementById("clear-button").addEventListener('click', function(){
-messages[0].textContent = "you're great";
-messages[1].textContent = "thanks!";
-messages[2].textContent = "you're welcome";
-messages[3].textContent = "you're great";
+
+    const allMessages = document.getElementsByClassName("messages");
+    console.log("message class list: " ,allMessages[0].children)
+    // allMessages[0].innerHTML = ""
+    
+   while(allMessages[0].children.length > 0) { 
+        allMessages[0].children[0].remove()
+   }
+// messages[0].textContent = "you're great";
+// messages[1].textContent = "thanks!";
+// messages[2].textContent = "you're welcome";
+// messages[3].textContent = "you're great";
 })
 
 
@@ -29,7 +36,7 @@ themeDropDown.addEventListener("click", colorTheme)
 ///
 function colorTheme(){
     //grab right and left messages from html file and save them as a variable
-    //use if else statement and place a for loop inside of these statements. we will be looping over the right messages and then wel will have a separate for loop for the left messages
+    //use if else statement and place a for loop inside of these statements. we will be looping over the right messages and then we will have a separate for loop for the left messages
     
     const allRightMsgs = document.getElementsByClassName("message right")
     const allLeftMsgs = document.getElementsByClassName("message left")
@@ -82,13 +89,41 @@ form.addEventListener("submit", function(event){
     const newMessage = form.input.value
 
     var newDiv = document.createElement("div")
-    newDiv.className = "newDiv";
+    // newDiv.className = "newDiv";
 
     
 
     //create classname used above
-    
+    const allMessages = document.getElementsByClassName("message")
+    console.log(allMessages)
+
+    if(allMessages[allMessages.length-1].classList.contains("right")){
+        newDiv.classList.add("message", "left")
+          // if it's theme-one, 
+            //  newDiv.style.backgroundColor = LEFT, theme-one bg color
+            // and text color
+            // else 
+            //  newDiv.style.backgroundColor = LEFT, theme-two bgcolor
+            // and text color
+    }
+    else{
+        newDiv.classList.add("message", "right")
+                  // if it's theme-one
+            //  newDiv.style.backgroudColor = right, theme-one bg color
+            // and text color
+            // else 
+            //  newDiv.style.backgroundColor = right, theme-two bgcolor
+            //  and text color
+    }
+
     newDiv.textContent = newMessage
+
+    // 
+    // grab the current theme 
+    // if it's theme-one, 
+    //  newDiv.style.backgroundColor = lightblue
+    // else 
+    //  newDiv.style.backgroundColor = black
     messagess.append(newDiv)
     console.log(newMessage)
     form.input.value = ""
