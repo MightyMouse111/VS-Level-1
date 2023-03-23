@@ -1,0 +1,34 @@
+body {
+    font-family: "Comic Sans MS", cursive, sans-serif;
+    color: black;
+}
+
+.navbar li {
+    display: inline-block;
+    color: red;
+    background-color: orange;
+}
+
+.welcome {
+    text-decoration: underline;
+    color: blueviolet;
+}
+
+.code-photo {
+    max-width: 300px;
+    float: left;
+}
+
+.list {
+    clear: both;
+}
+
+.fake-link {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+element.style {
+    background-color: bisque;
+}

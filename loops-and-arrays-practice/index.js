@@ -16,7 +16,7 @@ var count = 0;
         }
     }
 //Then we console log the results of how many times its counted the text "computer"
-      console.log (count);
+      console.log ("Computer: " + count);
 
 //This works as well but is not a for loop:
 //var officeItems = ["stapler", "monitor", "computer", "desk", "lamp", "computer", "lamp", "stapler", "computer",  "computer"]
